@@ -69,6 +69,6 @@ class PracowniksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pracownik_params
-      params.require(:pracownik).permit(:ID_pracownika, :ID_rodzajprac, :imie, :nazwisko, :pesel, :data_zatrudnienia, :zarobki, :aktywny)
+      params.require(:pracownik).permit(:ID_pracownika, :ID_rodzajprac, :imie, :nazwisko, :pesel, :data_zatrudnienia, :zarobki, :aktywny, :password, :password_confirmation)
     end
 end

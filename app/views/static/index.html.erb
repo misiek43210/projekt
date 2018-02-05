@@ -8,9 +8,10 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
-
-<h1><%= @some_variable %></h1>
 <ul>
-<%= @pracownik.each do |pracownik| %>
-<li><%=pracownik.imie%><%=pracownik.zarobki%></li>
+<% @pracowniks.each do |pracownik| %>
+<%= link_to pracownik do %>
+	<li><%= pracownik.imie %> <%= pracownik.nazwisko %></li>
+<% end %>
+<% end %>
 </ul>

@@ -43,6 +43,17 @@
     <%= f.label :aktywny %><br>
     <%= f.check_box :aktywny %>
   </div>
+<br><br>
+<div class="field">
+<%= f.label :password %><br>
+<%= f.password_field :password, id: :pracownik_password %>
+</div>
+
+<div class="field">
+<%= f.label :password_confirmation %><br>
+<%= f.password_field :password_confirmation, id: :pracownik_password_confirmation %>
+</div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

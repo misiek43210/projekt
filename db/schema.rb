@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180205164055) do
+ActiveRecord::Schema.define(version: 20180205212151) do
 
   create_table "archiwums", force: :cascade do |t|
     t.integer  "ID_wpisu"
@@ -23,13 +23,15 @@ ActiveRecord::Schema.define(version: 20180205164055) do
   end
 
   create_table "oddzialies", force: :cascade do |t|
+    t.integer  "prac2oddzials_id"
     t.integer  "ID_oddzialu"
     t.string   "oddzial"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "pacjents", force: :cascade do |t|
+    t.integer  "wizytums_id"
     t.integer  "ID_Pacjenta"
     t.string   "imie"
     t.string   "nazwisko"
@@ -39,8 +41,8 @@ ActiveRecord::Schema.define(version: 20180205164055) do
     t.datetime "updated_at",     null: false
   end
 
-  create_table "prac2oddzials", force: :cascade do |t|
-    t.integer  "ID_Pracownika"
+  create_table "prac2oddzials", id: false, force: :cascade do |t|
+    t.integer  "ID_pracownika"
     t.integer  "ID_oddzialu"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -64,9 +66,11 @@ ActiveRecord::Schema.define(version: 20180205164055) do
     t.boolean  "aktywny"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "password_digest"
   end
 
   create_table "rodzaj_pracownikas", force: :cascade do |t|
+    t.integer  "pracowniks_id"
     t.integer  "ID_rodzajprac"
     t.string   "rodazj_prac"
     t.datetime "created_at",    null: false
@@ -74,10 +78,11 @@ ActiveRecord::Schema.define(version: 20180205164055) do
   end
 
   create_table "specjalizacjas", force: :cascade do |t|
+    t.integer  "prac2specjalizacjas_id"
     t.integer  "ID_specjalizacji"
     t.string   "specjalizacja"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "terminarzs", force: :cascade do |t|
@@ -89,13 +94,11 @@ ActiveRecord::Schema.define(version: 20180205164055) do
   end
 
   create_table "wizyta", force: :cascade do |t|
+    t.integer  "archiwums_id"
     t.integer  "ID_wizyty"
-    t.integer  "ID_lekarza"
-    t.integer  "ID_pacjenta"
-    t.integer  "ID_recepcjonisty"
     t.date     "termin"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

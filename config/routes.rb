@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
 root to: 'static#index'
+
+get '/login', to: 'sessions#new'
+post '/login', to: 'sessions#create'
+delete '/logout',
+to: 'sessions#destroy'
+
   resources :archiwums
   resources :pacjents
   resources :wizyta
