@@ -1,0 +1,2 @@
+module WizytaHelper
+end

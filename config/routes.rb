@@ -1,4 +1,51 @@
 Rails.application.routes.draw do
+  resources :archiwums
+  resources :pacjents
+  resources :wizyta
+  resources :terminarzs
+  resources :prac2specjalizacjas
+  resources :specjalizacjas
+  resources :prac2oddzials
+  resources :pracowniks
+  resources :oddzialies
+  resources :rodzaj_pracownikas
+  resources :archiwums
+  resources :pacjents
+  resources :wizyta
+  resources :terminarzs
+  resources :prac2specjalizacjas
+  resources :specjalizacjas
+  resources :prac2oddzials
+  resources :oddzialies
+  resources :rodzaj_pracownikas
+  resources :pracowniks
+  resources :oddzialies
+  resources :pracowniks
+  resources :oddzialies
+  resources :pracowniks
+  resources :oddzials
+  resources :pracowniks
+  resources :hehies
+  resources :hehs
+  resources :hehehs
+  resources :hehs
+  resources :hehehs
+  resources :hehehs
+  resources :hehes
+  resources :specjalizacjas
+  resources :prac2specjalizacjas
+  resources :oddzialies
+  resources :prac2oddzials
+  resources :pracowniks
+  resources :rodzaj_pracownikas
+  resources :wozyta
+  resources :archiwums
+  resources :pacjents
+  resources :terminarzs
+  resources :students
+  resources :pracowniks
+  resources :pracownikis
+  resources :pracowniks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pracowniks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id pracownika</th>
+      <th>Id rodzajprac</th>
+      <th>Imie</th>
+      <th>Nazwisko</th>
+      <th>Pesel</th>
+      <th>Data zatrudnienia</th>
+      <th>Zarobki</th>
+      <th>Aktywny</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pracowniks.each do |pracownik| %>
+      <tr>
+        <td><%= pracownik.ID_pracownika %></td>
+        <td><%= pracownik.ID_rodzajprac %></td>
+        <td><%= pracownik.imie %></td>
+        <td><%= pracownik.nazwisko %></td>
+        <td><%= pracownik.pesel %></td>
+        <td><%= pracownik.data_zatrudnienia %></td>
+        <td><%= pracownik.zarobki %></td>
+        <td><%= pracownik.aktywny %></td>
+        <td><%= link_to 'Show', pracownik %></td>
+        <td><%= link_to 'Edit', edit_pracownik_path(pracownik) %></td>
+        <td><%= link_to 'Destroy', pracownik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pracownik', new_pracownik_path %>

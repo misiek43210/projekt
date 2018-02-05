@@ -1,0 +1,37 @@
+<%= form_for(@wizytum) do |f| %>
+  <% if @wizytum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wizytum.errors.count, "error") %> prohibited this wizytum from being saved:</h2>
+
+      <ul>
+      <% @wizytum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ID_wizyty %><br>
+    <%= f.number_field :ID_wizyty %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_lekarza %><br>
+    <%= f.number_field :ID_lekarza %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_pacjenta %><br>
+    <%= f.number_field :ID_pacjenta %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_recepcjonisty %><br>
+    <%= f.number_field :ID_recepcjonisty %>
+  </div>
+  <div class="field">
+    <%= f.label :termin %><br>
+    <%= f.date_select :termin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

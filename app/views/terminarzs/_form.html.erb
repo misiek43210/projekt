@@ -1,0 +1,29 @@
+<%= form_for(@terminarz) do |f| %>
+  <% if @terminarz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@terminarz.errors.count, "error") %> prohibited this terminarz from being saved:</h2>
+
+      <ul>
+      <% @terminarz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ID_terminu %><br>
+    <%= f.number_field :ID_terminu %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_lekarza %><br>
+    <%= f.number_field :ID_lekarza %>
+  </div>
+  <div class="field">
+    <%= f.label :wolne_terminy %><br>
+    <%= f.date_select :wolne_terminy %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

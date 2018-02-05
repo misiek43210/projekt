@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Prac2oddzials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id pracownika</th>
+      <th>Id oddzialu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prac2oddzials.each do |prac2oddzial| %>
+      <tr>
+        <td><%= prac2oddzial.ID_Pracownika %></td>
+        <td><%= prac2oddzial.ID_oddzialu %></td>
+        <td><%= link_to 'Show', prac2oddzial %></td>
+        <td><%= link_to 'Edit', edit_prac2oddzial_path(prac2oddzial) %></td>
+        <td><%= link_to 'Destroy', prac2oddzial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prac2oddzial', new_prac2oddzial_path %>

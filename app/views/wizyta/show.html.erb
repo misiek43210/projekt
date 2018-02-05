@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id wizyty:</strong>
+  <%= @wizytum.ID_wizyty %>
+</p>
+
+<p>
+  <strong>Id lekarza:</strong>
+  <%= @wizytum.ID_lekarza %>
+</p>
+
+<p>
+  <strong>Id pacjenta:</strong>
+  <%= @wizytum.ID_pacjenta %>
+</p>
+
+<p>
+  <strong>Id recepcjonisty:</strong>
+  <%= @wizytum.ID_recepcjonisty %>
+</p>
+
+<p>
+  <strong>Termin:</strong>
+  <%= @wizytum.termin %>
+</p>
+
+<%= link_to 'Edit', edit_wizytum_path(@wizytum) %> |
+<%= link_to 'Back', wizyta_path %>

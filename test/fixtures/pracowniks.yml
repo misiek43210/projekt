@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ID_pracownika: 1
+  ID_rodzajprac: 1
+  imie: MyString
+  nazwisko: MyString
+  pesel: 1
+  data_zatrudnienia: 2018-02-05
+  zarobki: 1.5
+  aktywny: false
+
+two:
+  ID_pracownika: 1
+  ID_rodzajprac: 1
+  imie: MyString
+  nazwisko: MyString
+  pesel: 1
+  data_zatrudnienia: 2018-02-05
+  zarobki: 1.5
+  aktywny: false

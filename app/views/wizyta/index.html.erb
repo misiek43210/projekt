@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wizyta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id wizyty</th>
+      <th>Id lekarza</th>
+      <th>Id pacjenta</th>
+      <th>Id recepcjonisty</th>
+      <th>Termin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wizyta.each do |wizytum| %>
+      <tr>
+        <td><%= wizytum.ID_wizyty %></td>
+        <td><%= wizytum.ID_lekarza %></td>
+        <td><%= wizytum.ID_pacjenta %></td>
+        <td><%= wizytum.ID_recepcjonisty %></td>
+        <td><%= wizytum.termin %></td>
+        <td><%= link_to 'Show', wizytum %></td>
+        <td><%= link_to 'Edit', edit_wizytum_path(wizytum) %></td>
+        <td><%= link_to 'Destroy', wizytum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wizytum', new_wizytum_path %>

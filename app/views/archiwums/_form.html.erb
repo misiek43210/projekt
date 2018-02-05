@@ -1,0 +1,33 @@
+<%= form_for(@archiwum) do |f| %>
+  <% if @archiwum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@archiwum.errors.count, "error") %> prohibited this archiwum from being saved:</h2>
+
+      <ul>
+      <% @archiwum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ID_wpisu %><br>
+    <%= f.number_field :ID_wpisu %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_wizyty %><br>
+    <%= f.number_field :ID_wizyty %>
+  </div>
+  <div class="field">
+    <%= f.label :historia %><br>
+    <%= f.text_field :historia %>
+  </div>
+  <div class="field">
+    <%= f.label :inf_dod %><br>
+    <%= f.text_field :inf_dod %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

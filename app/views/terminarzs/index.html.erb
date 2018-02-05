@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Terminarzs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id terminu</th>
+      <th>Id lekarza</th>
+      <th>Wolne terminy</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @terminarzs.each do |terminarz| %>
+      <tr>
+        <td><%= terminarz.ID_terminu %></td>
+        <td><%= terminarz.ID_lekarza %></td>
+        <td><%= terminarz.wolne_terminy %></td>
+        <td><%= link_to 'Show', terminarz %></td>
+        <td><%= link_to 'Edit', edit_terminarz_path(terminarz) %></td>
+        <td><%= link_to 'Destroy', terminarz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Terminarz', new_terminarz_path %>

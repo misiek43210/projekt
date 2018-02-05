@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Specjalizacjas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id specjalizacji</th>
+      <th>Specjalizacja</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @specjalizacjas.each do |specjalizacja| %>
+      <tr>
+        <td><%= specjalizacja.ID_specjalizacji %></td>
+        <td><%= specjalizacja.specjalizacja %></td>
+        <td><%= link_to 'Show', specjalizacja %></td>
+        <td><%= link_to 'Edit', edit_specjalizacja_path(specjalizacja) %></td>
+        <td><%= link_to 'Destroy', specjalizacja, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Specjalizacja', new_specjalizacja_path %>

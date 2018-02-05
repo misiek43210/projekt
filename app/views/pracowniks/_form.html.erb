@@ -1,0 +1,49 @@
+<%= form_for(@pracownik) do |f| %>
+  <% if @pracownik.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pracownik.errors.count, "error") %> prohibited this pracownik from being saved:</h2>
+
+      <ul>
+      <% @pracownik.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ID_pracownika %><br>
+    <%= f.number_field :ID_pracownika %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_rodzajprac %><br>
+    <%= f.number_field :ID_rodzajprac %>
+  </div>
+  <div class="field">
+    <%= f.label :imie %><br>
+    <%= f.text_field :imie %>
+  </div>
+  <div class="field">
+    <%= f.label :nazwisko %><br>
+    <%= f.text_field :nazwisko %>
+  </div>
+  <div class="field">
+    <%= f.label :pesel %><br>
+    <%= f.number_field :pesel %>
+  </div>
+  <div class="field">
+    <%= f.label :data_zatrudnienia %><br>
+    <%= f.date_select :data_zatrudnienia %>
+  </div>
+  <div class="field">
+    <%= f.label :zarobki %><br>
+    <%= f.text_field :zarobki %>
+  </div>
+  <div class="field">
+    <%= f.label :aktywny %><br>
+    <%= f.check_box :aktywny %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  index_wizyty: 1
+  index_lekarza: 1
+  index_pacjenta: 1
+  index_recejpcjonisty: 1
+  termin: 2018-02-05
+
+two:
+  index_wizyty: 1
+  index_lekarza: 1
+  index_pacjenta: 1
+  index_recejpcjonisty: 1
+  termin: 2018-02-05

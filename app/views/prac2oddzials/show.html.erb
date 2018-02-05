@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id pracownika:</strong>
+  <%= @prac2oddzial.ID_Pracownika %>
+</p>
+
+<p>
+  <strong>Id oddzialu:</strong>
+  <%= @prac2oddzial.ID_oddzialu %>
+</p>
+
+<%= link_to 'Edit', edit_prac2oddzial_path(@prac2oddzial) %> |
+<%= link_to 'Back', prac2oddzials_path %>

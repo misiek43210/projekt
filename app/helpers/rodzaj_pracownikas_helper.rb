@@ -1,0 +1,2 @@
+module RodzajPracownikasHelper
+end

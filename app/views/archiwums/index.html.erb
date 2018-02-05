@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Archiwums</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id wpisu</th>
+      <th>Id wizyty</th>
+      <th>Historia</th>
+      <th>Inf dod</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @archiwums.each do |archiwum| %>
+      <tr>
+        <td><%= archiwum.ID_wpisu %></td>
+        <td><%= archiwum.ID_wizyty %></td>
+        <td><%= archiwum.historia %></td>
+        <td><%= archiwum.inf_dod %></td>
+        <td><%= link_to 'Show', archiwum %></td>
+        <td><%= link_to 'Edit', edit_archiwum_path(archiwum) %></td>
+        <td><%= link_to 'Destroy', archiwum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Archiwum', new_archiwum_path %>

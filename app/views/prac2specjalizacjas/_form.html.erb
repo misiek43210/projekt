@@ -1,0 +1,25 @@
+<%= form_for(@prac2specjalizacja) do |f| %>
+  <% if @prac2specjalizacja.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prac2specjalizacja.errors.count, "error") %> prohibited this prac2specjalizacja from being saved:</h2>
+
+      <ul>
+      <% @prac2specjalizacja.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ID_pracownika %><br>
+    <%= f.number_field :ID_pracownika %>
+  </div>
+  <div class="field">
+    <%= f.label :ID_specjalizacji %><br>
+    <%= f.number_field :ID_specjalizacji %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

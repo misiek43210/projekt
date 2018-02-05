@@ -1,0 +1,25 @@
+<%= form_for(@oddzialy) do |f| %>
+  <% if @oddzialy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@oddzialy.errors.count, "error") %> prohibited this oddzialy from being saved:</h2>
+
+      <ul>
+      <% @oddzialy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ID_oddzialu %><br>
+    <%= f.number_field :ID_oddzialu %>
+  </div>
+  <div class="field">
+    <%= f.label :oddzial %><br>
+    <%= f.text_field :oddzial %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

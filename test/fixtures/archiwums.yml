@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ID_wpisu: 1
+  ID_wizyty: 1
+  historia: MyString
+  inf_dod: MyString
+
+two:
+  ID_wpisu: 1
+  ID_wizyty: 1
+  historia: MyString
+  inf_dod: MyString

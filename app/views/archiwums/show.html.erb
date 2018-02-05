@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id wpisu:</strong>
+  <%= @archiwum.ID_wpisu %>
+</p>
+
+<p>
+  <strong>Id wizyty:</strong>
+  <%= @archiwum.ID_wizyty %>
+</p>
+
+<p>
+  <strong>Historia:</strong>
+  <%= @archiwum.historia %>
+</p>
+
+<p>
+  <strong>Inf dod:</strong>
+  <%= @archiwum.inf_dod %>
+</p>
+
+<%= link_to 'Edit', edit_archiwum_path(@archiwum) %> |
+<%= link_to 'Back', archiwums_path %>

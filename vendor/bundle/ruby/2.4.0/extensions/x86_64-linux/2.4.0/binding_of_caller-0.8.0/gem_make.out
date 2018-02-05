@@ -1,0 +1,16 @@
+current directory: /home/michal/projekt/projekt/vendor/bundle/ruby/2.4.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+/home/michal/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20180205-3644-qgnpne.rb extconf.rb
+
+current directory: /home/michal/projekt/projekt/vendor/bundle/ruby/2.4.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** Brak reguł do wykonania obiektu 'clean'. Stop.
+
+current directory: /home/michal/projekt/projekt/vendor/bundle/ruby/2.4.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /home/michal/projekt/projekt/vendor/bundle/ruby/2.4.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

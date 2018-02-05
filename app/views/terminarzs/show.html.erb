@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id terminu:</strong>
+  <%= @terminarz.ID_terminu %>
+</p>
+
+<p>
+  <strong>Id lekarza:</strong>
+  <%= @terminarz.ID_lekarza %>
+</p>
+
+<p>
+  <strong>Wolne terminy:</strong>
+  <%= @terminarz.wolne_terminy %>
+</p>
+
+<%= link_to 'Edit', edit_terminarz_path(@terminarz) %> |
+<%= link_to 'Back', terminarzs_path %>

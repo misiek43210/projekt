@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ID_pracownika: 1
+  ID_specjalizacji: 1
+
+two:
+  ID_pracownika: 1
+  ID_specjalizacji: 1

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rodzaj Pracownikas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id rodzajprac</th>
+      <th>Rodazj prac</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rodzaj_pracownikas.each do |rodzaj_pracownika| %>
+      <tr>
+        <td><%= rodzaj_pracownika.ID_rodzajprac %></td>
+        <td><%= rodzaj_pracownika.rodazj_prac %></td>
+        <td><%= link_to 'Show', rodzaj_pracownika %></td>
+        <td><%= link_to 'Edit', edit_rodzaj_pracownika_path(rodzaj_pracownika) %></td>
+        <td><%= link_to 'Destroy', rodzaj_pracownika, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rodzaj pracownika', new_rodzaj_pracownika_path %>
